@@ -1,8 +1,10 @@
-import React from "react";
 import Layout from "@theme/Layout";
+import React from "react";
 import { AboutUsHeader } from "../../components/AboutUsHeader";
 
 import Head from "@docusaurus/Head";
+import { ContactUsHeader } from "../../components/ContactUsHeader";
+import { TitleContactUsCard } from "../../components/TitleContactUsCard";
 import { TitleTeamCards } from "../../components/TitleTeamCards";
 
 const container: React.CSSProperties = {
@@ -25,6 +27,12 @@ export default () => {
         <AboutUsHeader />
         <br />
         <TitleTeamCards />
+        <br />
+        <br />
+        <br />
+        <ContactUsHeader />
+        <br />
+        <TitleContactUsCard />
         <br />
       </div>
     </Layout>
