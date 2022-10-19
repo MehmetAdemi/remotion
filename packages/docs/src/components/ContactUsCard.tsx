@@ -1,6 +1,7 @@
 import React from "react";
 import { Spacer } from "../../components/layout/Spacer";
 import ContactUsCardCSS from "./ContactUsCardCSS.module.css";
+import { ContactUsForm } from "./ContactUsFormFinal";
 
 const ButtonMailto = ({ mailto, label }) => {
   return <a href={mailto}>{label}</a>;
@@ -16,7 +17,7 @@ const panel: React.CSSProperties = {
   flex: 1,
   paddingTop: 30,
   paddingBottom: 10,
-  minHeight: 600,
+  minHeight: 400,
   display: "flex",
   flexDirection: "column",
 };
@@ -79,6 +80,8 @@ export const ContactUsCardLayout: React.FC<{}> = () => {
             </span>
             <span>Contact us</span>
           </h1>
+          <br />
+          <ContactUsForm />
         </div>
       </div>
       <Spacer />
@@ -98,14 +101,20 @@ export const ContactUsCardLayout: React.FC<{}> = () => {
                 <svg
                   style={{ width: 25, height: 25 }}
                   xmlns="http://www.w3.org/2000/svg"
-                  className="ml-4 h-12 transform rotate-45"
-                  viewBox="0 0 20 15"
-                  fill="currentColor"
+                  fill="none"
+                  viewBox="0 0 24 20"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-6 h-6"
                 >
-                  <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"
+                  />
                 </svg>
               </span>
-              <span>Contact us</span>
+              <span>Map</span>
             </h1>
           </div>
         </div>
@@ -139,6 +148,17 @@ export const ContactUsCardLayout: React.FC<{}> = () => {
               </span>
               <span> Address</span>
             </h1>
+            <ul style={{ ...list, flex: 1 }}>
+              <li>
+                {"Remotion AG"}
+                <br /> {"Hohlstrasse 186/188"}
+                <br /> {"8004 Zurich"}
+                <br /> {"Switzerland"}
+                <br />
+                <br />
+                <br /> {"UID (VAT-no.): CHE-382.933.230"}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
